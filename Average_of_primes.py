@@ -1,16 +1,20 @@
-m=int(input())
+from math import*
+def prime(n):
+    sq=int(sqrt(n))
+    if n==1:
+        return False
+    for i in range(2,sq+1):
+        if n%i==0:
+            return False
+    return True
+n=int(input())
 d=list(map(int,input().split()))
-m=0
 c=0
-for i in range(0,len(d)):
-    s=d[i]
-    c1=0
-    for j in range(1,s):
-        if s%j==0:
-            c1+=1
-    if c1==1:
-        m+=s
-        c+=1
-avg=m/c
-f="{:.2f}".format(avg)
-print(f)
+h=0
+for i in d:
+    if prime(i):
+        c+=i
+        h+=1
+av=c/h
+avg="{:.2f}".format(av)
+print(avg)
