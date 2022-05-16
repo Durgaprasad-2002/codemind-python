@@ -1,0 +1,5 @@
+n=input()
+n=list(n)
+n.reverse()
+n=''.join(n)
+print(n)
