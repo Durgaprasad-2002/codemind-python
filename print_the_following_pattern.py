@@ -1,8 +1,10 @@
 n=int(input())
 c=[]
-for i in range(1,n+1):
-    c.append(str(i))
+for i in range(n):
+	c.append("x")
+g=c
 for j in range(n):
-    print(''.join(c))
-    c.remove(c[-1])
-    
+	d=list(g)
+	d.remove(d[j])
+	d.insert(j,"0")
+	print(''.join(d))
